@@ -1,0 +1,43 @@
+header {
+    background: linear-gradient(0deg, var(--main-header-color) 0%, var(--secundary-main-color) 100%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .logo-container img {
+    width: 50px;
+    margin: 20px;
+    border-radius: 30%;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  }
+  
+  .logo-container h1 {
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: bolder;
+    color: var(--header-txt-color);
+  }
+  
+  .dev-contact {
+    color: var(--header-txt-color);
+    font-size: 14px;
+    font-weight: 300;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dev-contact-link { 
+    display: flex;
+    align-items: center; 
+  }
