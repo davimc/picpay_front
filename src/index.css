@@ -3,7 +3,7 @@
     --main-bg-color: #b7b7b7;
     --main-tx-color: #484848;
     --main-header-color: #0c622f;
-    --secundary-main-color: #44dc74;
+    --secundary-main-color: #3fc469;
     --contrast: #000;
 
     /* components */
@@ -11,7 +11,7 @@
     --header-txt-color: #cbf1d9;
 
     /* inputs */
-    --input-bg-color: #1b2531;
+    --input-bg-color: #b7b7b7;
     --input-bd-color:#384459;
     --input-txt-color: #9aaabe;
 
@@ -26,7 +26,7 @@
     /* CardNav */
     --nav-card-clr: #1b2531;
     
-    --nav-card-bg: #283142;
+    --nav-card-bg: #b7b7b7;
     --nav-card-nav: #9aaabe;
 
     /* CardViewer */

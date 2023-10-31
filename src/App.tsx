@@ -1,6 +1,6 @@
 
-import CardViewer from './components/CardViewer'
 import Header from './components/Header'
+import Navigation from './components/Navigation'
 
 import './App.css'
 
@@ -11,7 +11,8 @@ function App() {
     <div className='App'>
       <Header/>
       <div className='container'>
-        <CardViewer/>  
+        <Navigation/>  
+        
       </div>      
     </div>
   )

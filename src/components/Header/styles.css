@@ -1,5 +1,5 @@
 header {
-    background: linear-gradient(0deg, var(--main-header-color) 0%, var(--secundary-main-color) 100%);
+    background: linear-gradient(0deg, var(--main-header-color) 5%, var(--secundary-main-color) 100%);
     
     display: flex;
     align-items: center;

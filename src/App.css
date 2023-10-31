@@ -26,5 +26,7 @@ a:visited {
   width: 100%;
   max-width: 900px;
   height: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
+  display: flex;
+  align-items: flex-end;
 }
