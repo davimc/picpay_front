@@ -1,0 +1,16 @@
+.founds-container {
+    display: flex;
+    margin: 2em;
+}
+.founds-visible {
+    /* background-color: var(--main-bg-color); */
+    
+    
+}
+.founds-container p {
+    margin-left: 5px;
+}
+
+.founds-value {
+    font-weight: bold;
+}
