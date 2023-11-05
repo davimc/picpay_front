@@ -1,7 +1,6 @@
 
 import { useState } from 'react'
 import { BsEye as Visible, BsEyeSlash as Invisible } from 'react-icons/bs'
-import {IconType} from 'react-icons'
 
 import './styles.css'
 
