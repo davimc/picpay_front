@@ -13,7 +13,7 @@ body,
 html {
   background-color: var(--main-bg-color);
   color: var(--main-tx-color);
-  width: ;
+  overflow: hidden;
 }
 
 a,
@@ -23,15 +23,6 @@ a:visited {
   text-decoration: none;
 }
 
-.App main {
-  width: 90%;
-  max-width: 900px;
-  height: 100%;
-  margin: 10px auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
 
 .App footer {
   position: absolute;

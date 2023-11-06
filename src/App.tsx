@@ -14,10 +14,8 @@ function App() {
       <Header/>
       <Resume />    
 
-      <main>
 
-        <Content />
-      </main>     
+        <Content/>    
       <footer>
       
       </footer>
