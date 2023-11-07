@@ -1,20 +1,24 @@
 .transfer-form {
-    flex: 4 1 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+    justify-content: center;
+}
+.transfer-form input {
+    min-width: 200px;
+    width: 20vw;
+    margin-left: 10px;
+}
+.transfer-form button {
+    min-width: 70px;
+    width: 5vw;
+    min-height: 35px;
+    margin: 10px;
 }
 .transfer-form input[type=number]::-webkit-inner-spin-button {
     appearance: none;
 }
 
-.transfer-contacts-container {
-    overflow: visible;
-}
 .transfer-contacts {
     width: 100%;
- 
     display: flex;
     justify-content: space-around;
     flex-direction: column;

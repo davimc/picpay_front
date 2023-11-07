@@ -17,6 +17,7 @@ export default function Transfer() {
                 <label htmlFor="amount">Valor:<br/>
                     <input type="number" value={valor} id="amount" placeholder='R$ 0,00' onChange={e => setValor((e.target.value as number))} />
                 </label>
+                <button type='submit'>Transferir</button>
             </form>
 
             {

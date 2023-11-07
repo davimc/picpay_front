@@ -1,5 +1,7 @@
 .card-container {
-    width: 90%;
+    min-width: 350px;
+    max-width: 500px;
+    width: 45vw;
     height: 5rem;
     border: 2px solid black;
     display: flex;
