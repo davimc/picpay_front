@@ -8,16 +8,19 @@ import './App.css'
 
 
 function App() {
-  
+
   return (
     <div className='App'>
-      <Header/>
-      <Resume />    
+      <header>
+        <Header />
+      </header>
+      <Resume />
 
-
-        <Content/>    
+      <main>
+      <Content />
+      </main>
       <footer>
-      
+        <Navigation />
       </footer>
     </div>
   )
