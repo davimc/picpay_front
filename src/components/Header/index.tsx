@@ -13,10 +13,10 @@ function Header() {
                 <h1>Picpay Simplificado</h1>
             </div>
             <p className='dev-contact'> Desenvolvido por
-                <div className='dev-contact-link'>
+                <span className='dev-contact-link'>
                 <InIcon style = {style}/>
                     <a href="https://www.linkedin.com/in/davi-matos-carvalho/"> davi-In</a>
-                </div>
+                </span>
             </p>
         </header>
     )
