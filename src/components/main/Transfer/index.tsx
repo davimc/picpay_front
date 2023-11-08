@@ -1,5 +1,7 @@
 import Card from '../../elements/Card'
+import { BsPersonCircle } from 'react-icons/bs'
 import { useState } from 'react'
+
 
 import './styles.css'
 
@@ -27,11 +29,11 @@ export default function Transfer() {
             }
             <div className='transfer-contacts-container'>
                 <div className='transfer-contacts'>
-                    <Card id={1} email='--INSERIR CHAVE--' name='--INSERIR NOME--' />
-                    <Card id={2} email='--INSERIR CHAVE--' name='--INSERIR NOME--' />
-                    <Card id={3} email='--INSERIR CHAVE--' name='--INSERIR NOME--' />
-                    <Card id={4} email='--INSERIR CHAVE--' name='--INSERIR NOME--' />
-                    <Card id={5} email='--INSERIR CHAVE--' name='--INSERIR NOME--' />
+                    <Card image={BsPersonCircle} info='--INSERIR CHAVE--' title='--INSERIR NOME--' />
+                    <Card image={BsPersonCircle} info='--INSERIR CHAVE--' title='--INSERIR NOME--' />
+                    <Card image={BsPersonCircle} info='--INSERIR CHAVE--' title='--INSERIR NOME--' />
+                    <Card image={BsPersonCircle} info='--INSERIR CHAVE--' title='--INSERIR NOME--' />
+                    <Card image={BsPersonCircle} info='--INSERIR CHAVE--' title='--INSERIR NOME--' />
                 </div>
             </div>
         </>
