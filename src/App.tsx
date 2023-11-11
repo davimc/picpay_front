@@ -17,11 +17,8 @@ function App() {
       <Resume />
 
       <main>
-      <Content />
+        <Content />
       </main>
-      <footer>
-        <Navigation />
-      </footer>
     </div>
   )
 }

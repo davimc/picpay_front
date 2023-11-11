@@ -12,25 +12,12 @@
 }
 .navigation ul {
     display:flex;
+    justify-content: space-around;
     list-style: none;
     width: 100%;
 }
-.navigation ul .list:nth-child(1).active ~ .indicator{
-    transform: translateX(calc(17px))
-}
-.navigation ul .list:nth-child(2).active ~ .indicator{
-    transform: translateX(calc(125px * 1))
-}
-.navigation ul .list:nth-child(3).active ~ .indicator{
-    transform: translateX(calc(116px * 2))
-}
-/* .navigation ul .list:nth-child(4).active ~ .indicator{
-    transform: translateX(calc(65px * 3))
-}
-.navigation ul .list:nth-child(5).active ~ .indicator{
-    transform: translateX(calc(65.5px * 4))
-} */
-.navigation ul .list {
+
+.navigation ul .list .link {
     position:relative;
     display:flex;
     justify-content: center;
@@ -43,7 +30,7 @@
     z-index: 1;
 }
 .navigation ul .list .nav-icon {
-    position: relative;
+    position: relative;    
     line-height: 75px;
     font-size: 1.5em;
     color: var(--nav-card-clr);
@@ -51,7 +38,7 @@
     opacity: 0.4;
 }
 .navigation ul .list.active .nav-icon {
-    transform: translatey(-35px);
+    transform: translateY(-35px);
     opacity: 1;
 }
 .navigation ul .list .nav-text {
@@ -103,4 +90,13 @@
     border-top-left-radius: 20px;
     background: transparent;
     box-shadow: -1px -10px 0 0 var(--nav-card-bg);
+}
+.navigation ul .list:nth-child(1).active ~ .indicator{
+    transform: translateX(-105px)
+}
+.navigation ul .list:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(0))
+}
+.navigation ul .list:nth-child(3).active ~ .indicator{
+    transform: translateX(105px)
 }
