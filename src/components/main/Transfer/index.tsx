@@ -1,25 +1,40 @@
 import Card from '../../elements/Card'
 import { BsPersonCircle } from 'react-icons/bs'
-import { useState } from 'react'
-
+import { useState, useMemo,  } from 'react'
 
 import './styles.css'
 
-
+interface keyAlert<Type> {
+    type: Type,
+    hidde: Boolean;
+}
+function isNumeric(num: string) {
+    return !isNaN(parseFloat(num));
+}
 export default function Transfer() {
-    const [chave, setChave] = useState<string>('')
-    const [valor, setValor] = useState<number>();
-
+    const [key, setKey] = useState<keyAlert<string>>({type: '', hidde: false})
+    const [amount, setAmount] = useState<keyAlert<number>>({type:0.00,hidde: false});
+    const handleTransfer = () => {    
+        console.log(amount.hidde? 'true':'false')
+        setAmount({...amount, hidde:amount.type == 0})
+        setKey({...key,hidde: key.type == ''})
+        
+    }
     return (
         <>
-            <form className='transfer-form'>
-                <label htmlFor="chave">Chave:<br/>
-                    <input type="email" value={chave} id="chave" placeholder='example@email.com' onChange={e => setChave(e.target.value)} />
+            <form className='transfer-form' onSubmit={e => e.preventDefault()}>
+                <label htmlFor="key">Chave:<br/>
+                    <input type="email" value={key.type} id="key" placeholder='example@email.com' onChange={e => setKey({...key,type:e.target.value})} />
+                    <p className={key.hidde? 'alert':'alert hidden'}>O campo está vazio!</p>
                 </label>
                 <label htmlFor="amount">Valor:<br/>
-                    <input type="number" value={valor} id="amount" placeholder='R$ 0,00' onChange={e => setValor((e.target.value as number))} />
+                    <input type="number" min={0} step={0.01}value={amount.type.toFixed(2)} id="amount"  onChange={e => {
+                    //TODO corrigir pproblema com o backspace
+                    setAmount(({...amount, type: (!isNaN(parseFloat(e.target.value)) ? (parseFloat(e.target.value)*10):(amount.type/10))}))
+                    }} onWheel={e => e.preventDefault()}/>
+                    <p className={amount.hidde? 'alert':'alert hidden'}>O campo está vazio!</p>
                 </label>
-                <button type='submit'>Transferir</button>
+                <button type='submit' onClick={handleTransfer}>Transferir</button>
             </form>
 
             {
@@ -37,5 +52,7 @@ export default function Transfer() {
                 </div>
             </div>
         </>
+        
     )
+    
 }

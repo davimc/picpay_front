@@ -19,7 +19,12 @@
 .transfer-form input[type=number]::-webkit-inner-spin-button {
     appearance: none;
 }
-
+.alert {
+    color: red;
+}
+.hidden {
+    visibility: hidden;
+}
 .transfer-contacts {
     width: 100%;
     display: flex;
