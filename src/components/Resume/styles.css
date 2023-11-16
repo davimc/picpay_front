@@ -7,6 +7,8 @@
     border-radius: 0 0 10% 10%;
 
     background: var(--nav-card-nav);
+
+    height: 45px;
 }
 
 .resume-profile {
@@ -16,8 +18,8 @@
 
 }
 .profile-image {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     margin-right: 0.7em;
 }
 
