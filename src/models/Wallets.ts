@@ -1,6 +1,8 @@
 import { User } from './Users'
 
 export type WalletLogged = {
-    user: User,
+    id: number,
+    name: string,
+    email: string
     amount: number
 }

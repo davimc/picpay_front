@@ -6,8 +6,8 @@ import Navigation from "../../Navigation";
 import './styles.css'
 
 export default function Content() {
-    
     return (
+        
         <div className='context-container'>
             <Router basename="">
                 <Routes>

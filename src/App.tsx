@@ -1,25 +1,42 @@
 
 import Header from './components/Header'
-import Navigation from './components/Navigation'
 import Resume from './components/Resume'
 import Content from './components/main/Content'
 
 import './App.css'
+import { useState, createContext } from 'react'
+import axios from 'axios'
 
+
+export const TokenContext = createContext<string>('')
 
 function App() {
+  
+   const [token, setToken] = useState<string>('')
 
+  axios.post('http://localhost:8080/auth/login', {
+    login: 'bob@gmail.com',
+    password: '123456'
+  }).then(function (response) {
+    setToken(response.data.token)
+  }).catch(function (error) {
+    console.log(error)
+  })
+  // TODO verificar se é um useRef o melhor para esse context
   return (
-    <div className='App'>
-      <header>
+    <>
+       <header>
         <Header />
       </header>
+    <TokenContext.Provider value={token}>
+
       <Resume />
+    </TokenContext.Provider>
 
       <main>
         <Content />
       </main>
-    </div>
+      </>
   )
 }
 

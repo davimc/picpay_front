@@ -13,3 +13,6 @@
 
 ### Link para o backend 
 [github backend](https://github.com/davimc/picpay)
+
+### TODOs 
+- verificar se é um useRef o melhor para esse context
