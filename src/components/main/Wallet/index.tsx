@@ -1,14 +1,33 @@
-import { GoMoveToEnd as In, GoMoveToStart as Out } from 'react-icons/go'
+import {CiCreditCard1 as Cartao, CiBarcode as Boleto, CiExport  as Saque} from 'react-icons/ci'
 import Card from '../../elements/Card'
 
 import './styles.css'
 
+
+const styles = {width: '55px', height: '55px'}
 export default function Wallet() {
     return (
-    <>
-        <Card image={Out} info='50,00 enviados para XXXXX' title='Transferência' />
-        <Card image={Out} info='50,00 enviados para XXXXX' title='Transferência' />
-        <Card image={In} info='10,00 recebidos de XXXXX' title='Transferência' />
-        <Card image={In} info='540,00 recebidos de XXXXX' title='Transferência' />
-    </>)
+        <div className="wallet-container">
+            <div className="options-container">
+                <div className="option">
+                    <Cartao style={styles}/>
+                    <p className='option-text'>Cartões</p>
+                </div>
+                <div className="option">
+                    <Boleto style={styles}/>
+                    <p className='option-text'>Pagar Boleto</p>
+                </div>
+                <div className="option">
+                    <Saque style={styles}/>
+                    <p className='option-text'>Saque</p>
+                </div>
+            </div>
+            <div className="list-container">
+                <h4>Promoções</h4>
+                <div className="list-options"></div>
+                <div className="list-options"></div>
+                <div className="list-options"></div>
+            </div>
+        </div>
+    )
 }
