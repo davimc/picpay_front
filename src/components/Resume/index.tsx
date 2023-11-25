@@ -7,11 +7,14 @@ import './styles.css'
 import { TokenContext } from '../../App';
 import axios from 'axios';
 
-//const token = useContext(tokenContext)
-//const wallet = 
 function Resume() {
     const token = useContext(TokenContext)
-    const [wallet, setWallet] = useState<WalletLogged | null>(null)
+    const [wallet, setWallet] = useState<WalletLogged>({
+        id: 0,
+        name: '- - - - - -',
+        amount: 0.00, 
+        email: ''
+    })
     useEffect(() => {
             (axios.get('http://localhost:8080/wallets/logged',
                 {
@@ -21,10 +24,8 @@ function Resume() {
                 }).then(function (response) {
 
                     setWallet(response.data);
-                    return ''
                 }).catch(function (error) {
-                    console.log(error);
-                    return ''
+                    console.log(error)
                 }))
     }, [token])
 return (
@@ -36,12 +37,12 @@ return (
             < BsPersonCircle className='profile-image' />
             <div>
                 <p>Olá,</p>
-                <p>{wallet ? wallet.name : 'INSIRA O NOME'}</p>
+                <p>{wallet.name}</p>
             </div>
         </div>
 
         <div className='resume-founds'>
-            <Founds amount={wallet ? wallet.amount : 30.50} />
+            <Founds amount={wallet.amount} />
         </div>
 
 
