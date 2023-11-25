@@ -1,4 +1,3 @@
-import { User } from './Users'
 
 export type WalletLogged = {
     id: number,
