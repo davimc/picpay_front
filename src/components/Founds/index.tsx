@@ -22,7 +22,7 @@ function Founds(props: Found) {
                 {icon}
             </button >
             <p className='founds-type'>R$</p>
-            <p className='founds-value'>{props.amount}</p>
+            <p className='founds-value'>{props.amount.toFixed(2)}</p>
         </div>
     )
 } export default Founds
